@@ -2,9 +2,20 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Details from './pages/Details';
+import AddContact from './pages/AddContact';
+
+const routes = createBrowserRouter([
+  {path:'/', element: <App />},
+  {path:'/details/:id', element: <Details />},
+  {path:'/add-contact/', element: <AddContact /> }
+  ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={routes}>
+      <App />
+    </RouterProvider>
   </React.StrictMode>
 )
