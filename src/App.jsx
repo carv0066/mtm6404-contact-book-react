@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1 className="app-title">Contacts!</h1>
+      <h1 className="app-title">Contacts</h1>
 
       {/* Add Contact */}
       <div className="add-contact-button-container">

@@ -37,12 +37,17 @@ const Details = () => {
                 <h1 className="details-title">Details</h1>
                 <div className="back-button-container">
                     <Link to="/" className="back-button">
-                        <FontAwesomeIcon icon="arrow-right" className="icon back-button" /> Go back
+                        <FontAwesomeIcon icon="arrow-right" className="icon back-button" /> 
                     </Link>
                 </div>
             </div>
             {contact ? (
                 <div className="contact-details">
+                    <div class="button-container">
+                        <Link to={`/edit-contact/${id}`} className="edit-contact-button">
+                            Edit Contact
+                        </Link>
+                    </div>
                     <div className="contact-item">
                         <span className="contact-label">Name:</span> {contact.firstName} {contact.lastName}
                     </div>
